@@ -70,4 +70,4 @@ httplayer.NewServiceBuilder(oidcMW).
 
 # Examples
 
-Concrete microservices implementations are provided in the `examples` directory
+Complete Entando bundles are available under examples directory

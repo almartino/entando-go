@@ -1,0 +1,100 @@
+{
+  "microservices": [
+    {
+      "name": "conference-go",
+      "stack": "custom",
+      "dbms": "postgresql",
+      "healthCheckPath": "/api/health",
+      "commands": {
+        "build": "go build",
+        "run": "go run main.go",
+        "pack": "go build"
+      },
+      "resources": {
+        "memory": "128Mi",
+        "cpu": "100m",
+        "storage": "10Mi"
+      },
+      "version": "0.0.1"
+    }
+  ],
+  "microfrontends": [
+    {
+      "name": "conference-table",
+      "customElement": "conference-table",
+      "stack": "react",
+      "type": "widget",
+      "group": "free",
+      "publicFolder": "public",
+      "titles": {
+        "en": "conference-table",
+        "it": "conference-table"
+      },
+      "apiClaims": [
+        {
+          "name": "conference-api",
+          "type": "internal",
+          "serviceName": "conference-go"
+        }
+      ],
+      "commands": {
+        "run": "npm install && PORT=3003 npm start"
+      }
+    },
+    {
+      "name": "conference-details",
+      "customElement": "conference-details",
+      "stack": "react",
+      "type": "widget",
+      "group": "free",
+      "publicFolder": "public",
+      "titles": {
+        "en": "conference-details",
+        "it": "conference-details"
+      },
+      "apiClaims": [
+        {
+          "name": "conference-api",
+          "type": "internal",
+          "serviceName": "conference-go"
+        }
+      ],
+      "commands": {
+        "run": "npm install && PORT=3001 npm start"
+      }
+    },
+    {
+      "name": "conference-form",
+      "customElement": "conference-form",
+      "stack": "react",
+      "type": "widget",
+      "group": "free",
+      "publicFolder": "public",
+      "titles": {
+        "en": "conference-form",
+        "it": "conference-form"
+      },
+      "apiClaims": [
+        {
+          "name": "conference-api",
+          "type": "internal",
+          "serviceName": "conference-go"
+        }
+      ],
+      "commands": {
+        "run": "npm install && PORT=3002 npm start"
+      }
+    }
+  ],
+  "svc": [
+    "keycloak",
+    "postgresql",
+    "monitoring",
+    "grafana",
+    "zipkin"
+  ],
+  "name": "entando-go",
+  "version": "0.0.1",
+  "description": "Golang bundle showcase for entando",
+  "type": "bundle"
+}

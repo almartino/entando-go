@@ -1,0 +1,18 @@
+{
+  "common": {
+    "name": "",
+    "value": "",
+    "widgetName": "",
+    "notAuthenticated": ""
+  },
+  "entities": {
+    "conference": {
+      "id": "",
+      "name": "",
+      "location": ""
+    }
+  },
+  "error": {
+    "dataLoading": ""
+  }
+}

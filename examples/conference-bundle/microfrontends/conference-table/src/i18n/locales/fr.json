@@ -1,0 +1,40 @@
+{
+  "entities": {
+    "conference": {
+      "id": "",
+      "name": "",
+      "location": "",
+      "noItems": "",
+      "deleteDialog": {
+        "title": "",
+        "description": ""
+      }
+    }
+  },
+  "error": {
+    "dataLoading": ""
+  },
+  "common": {
+    "dataDeleted": "",
+    "delete": "",
+    "yes": "",
+    "no": "",
+    "notAuthenticated": "",
+    "loadingMore": ""
+  },
+  "filters": {
+    "field": "",
+    "operator": "",
+    "addFilter": "",
+    "clearFilters": "",
+    "filter": ""
+  },
+  "pagination": {
+    "ariaLabels": {
+      "firstPage": "",
+      "previousPage": "",
+      "nextPage": "",
+      "lastPage": ""
+    }
+  }
+}
